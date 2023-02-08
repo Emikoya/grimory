@@ -6,20 +6,25 @@ import {
   StatusBar,
   View,
   FlatList,
+  Pressable,
 } from "react-native";
 import { Card } from "react-native-paper";
 
 import { default as data } from "../../api/dataSpells.json";
+import { useNavigation } from "@react-navigation/native";
 
 const Item = ({ item }: any) => {
   const { name } = item;
+  const navigation = useNavigation();
   return (
     <SafeAreaView style={styles.item}>
-      <Card>
-        <Card.Content>
-          <Text style={styles.name}>{name}</Text>
-        </Card.Content>
-      </Card>
+      <Pressable onPress={()=> navigation.navigate("SpellsDetailsScreen")}>
+        <Card>
+          <Card.Content>
+            <Text style={styles.name}>{name}</Text>
+          </Card.Content>
+        </Card>
+      </Pressable>
     </SafeAreaView>
   );
 };

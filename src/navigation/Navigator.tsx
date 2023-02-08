@@ -6,6 +6,7 @@ const Stack = createNativeStackNavigator();
 
 import Index from "../screens/index";
 import { SpellsScreen } from "../screens/SpellsScreen";
+import { SpellsDetailsScreen } from "../screens/SpellsDetailsScreen";
 
 export const Navigator = () => {
     return (
@@ -14,6 +15,7 @@ export const Navigator = () => {
                 <Stack.Group>
                     <Stack.Screen name="Index" component={Index}/>
                     <Stack.Screen name="SpellsScreen" component={SpellsScreen}/>
+                    <Stack.Screen name="SpellsDetailsScreen" component={SpellsDetailsScreen}/>
                 </Stack.Group>
             </Stack.Navigator>
         </NavigationContainer>
