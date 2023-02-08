@@ -1,10 +1,11 @@
-// App.tsx
 
 import React from 'react';
-import Index from './src/screens/Index';
+
+import {SpellsScreen} from './src/screens/SpellsScreen';
 const App = () => {
     return (
-        <Index />
+
+        <SpellsScreen />
       );
 };
 
