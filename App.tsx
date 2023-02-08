@@ -1,12 +1,8 @@
+import React from "react";
 
-import React from 'react';
-
-import {SpellsScreen} from './src/screens/SpellsScreen';
+import { SpellsScreen } from "./src/screens/SpellsScreen";
 const App = () => {
-    return (
-
-        <SpellsScreen />
-      );
+  return <SpellsScreen />;
 };
 
 export default App;

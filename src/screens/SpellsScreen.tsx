@@ -1,31 +1,37 @@
 import React from "react";
-import { SafeAreaView, StyleSheet, Text, StatusBar, View, FlatList, Image } from "react-native";
-import {Card} from 'react-native-paper';
+import {
+  SafeAreaView,
+  StyleSheet,
+  Text,
+  StatusBar,
+  View,
+  FlatList,
+} from "react-native";
+import { Card } from "react-native-paper";
 
-import { default as data } from "../../api/data.json";
+import { default as data } from "../../api/dataSpells.json";
 
-const Item = ({item}: any) => {
-  const {name} = item;
+const Item = ({ item }: any) => {
+  const { name } = item;
   return (
     <SafeAreaView style={styles.item}>
-    <Card>
-      <Card.Content>
-        <Text style={styles.name}>{name}</Text>
-      </Card.Content>
-    </Card>
-  </SafeAreaView>
-  )
-
+      <Card>
+        <Card.Content>
+          <Text style={styles.name}>{name}</Text>
+        </Card.Content>
+      </Card>
+    </SafeAreaView>
+  );
 };
 
 export const SpellsScreen = () => {
   return (
     <SafeAreaView style={styles.safeContainer}>
       <View style={styles.container}>
-        {/* <FlatList 
+        <FlatList
           data={data.results}
-          renderItem={({item}) => <Item item={item}/>}
-        /> */}
+          renderItem={({ item }) => <Item item={item} />}
+        />
       </View>
     </SafeAreaView>
   );

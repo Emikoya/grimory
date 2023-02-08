@@ -4,9 +4,6 @@ import { Button } from "react-native-paper";
 import Constants from "expo-constants";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 
-// You can import from local files
-import AssetExample from "../../components/AssetExample";
-
 export default function App() {
   return (
     <SafeAreaProvider>
