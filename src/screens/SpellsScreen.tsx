@@ -28,6 +28,7 @@ export const SpellsScreen = () => {
   return (
     <SafeAreaView style={styles.safeContainer}>
       <View style={styles.container}>
+        <Text style={styles.title}>Spells</Text>
         <FlatList
           data={data.results}
           renderItem={({ item }) => <Item item={item} />}
@@ -40,11 +41,17 @@ export const SpellsScreen = () => {
 const styles = StyleSheet.create({
   safeContainer: {
     flex: 1,
-    marginTop: StatusBar.currentHeight || 0,
+    backgroundColor: "#f3e4db",
   },
   container: {
     paddingHorizontal: 20,
     marginTop: 20,
+    backgroundColor: "#f3e4db",
+  },
+  title: {
+    fontSize: 38,
+    textAlign: "center",
+    margin: 25,
   },
   item: {
     margin: 10,

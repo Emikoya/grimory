@@ -3,13 +3,15 @@ import { Text, View, StyleSheet } from "react-native";
 import { Button } from "react-native-paper";
 import Constants from "expo-constants";
 import { SafeAreaProvider } from "react-native-safe-area-context";
+import { useNavigation } from "@react-navigation/native";
 
-export default function App() {
+export default function Index() {
+  const navigation = useNavigation();
   return (
     <SafeAreaProvider>
       <View style={styles.container}>
         <Text style={styles.title}>Grimory</Text>
-        <Button style={styles.button} mode="contained">
+        <Button style={styles.button} mode="contained" onPress={()=> navigation.navigate("SpellsScreen")}>
           Spells
         </Button>
       </View>

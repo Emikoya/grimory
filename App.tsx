@@ -1,8 +1,8 @@
 import React from "react";
 
-import { SpellsScreen } from "./src/screens/SpellsScreen";
+import { Navigator } from "./src/navigation/Navigator";
 const App = () => {
-  return <SpellsScreen />;
+  return <Navigator />;
 };
 
 export default App;
